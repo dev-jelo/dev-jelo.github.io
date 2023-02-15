@@ -174,3 +174,7 @@ const typingImage = document.querySelector('.project-card-img-typing');
 typingImage.addEventListener('click', () => {
     typingImage.classList.toggle('project-card-img-typing-gif');
 });
+
+// Pre load the gif so there is no pause when clicked
+let img = new Image();
+img.src = './public/typing.gif';
