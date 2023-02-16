@@ -5,7 +5,7 @@ const myName = document.querySelector('#my-name-text');
 const cursor = document.querySelector('.cursor');
 
 let i = 0;
-const typingText = "Jeremy Lo"
+const typingText = "Jeremy" + String.fromCharCode(160) + "Lo";
 function typing() {
     if (i < typingText.length) {
         myName.innerHTML += typingText[i];
