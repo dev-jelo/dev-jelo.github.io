@@ -159,10 +159,11 @@ window.addEventListener('load', () => {
     // Prevent navbar and arrow animation if scrolled down
     if (document.documentElement.scrollTop >= myNameCoords.bottom + document.documentElement.scrollTop) {
         navBar.classList.remove('fade-in-animation');
+        toggle.classList.remove('fade-in-animation');    
     }
-        // if (window.pageYOffset + self.innerHeight === document.documentElement.scrollHeight) {
-        //     navBar.classList.remove('fade-in-animation');
-    // }
+    if (window.pageYOffset + self.innerHeight === document.documentElement.scrollHeight) {
+        navBar.classList.remove('fade-in-animation');
+    }
     if (document.documentElement.scrollTop > 0) {
         arrow.classList.remove('fade-in-animation');
     }
