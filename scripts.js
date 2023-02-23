@@ -97,8 +97,8 @@ function toggleDarkThemeOnClasses(addDark) {
 function setDarkTheme() {
     theme = 'dark';
     sessionStorage.setItem('theme', 'dark');
-    toggle.src = './public/sun.svg';
-    toggleNav.src = './public/sun.svg';
+    toggle.src = './public/moon.svg';
+    toggleNav.src = './public/moon.svg';
     document.body.classList.add('dark-theme');
     navBar.classList.add('dark-theme');
     cursor.classList.add('cursor-dark-theme');
@@ -118,8 +118,8 @@ function setDarkTheme() {
 function setLightTheme() {
     theme = 'light';
     sessionStorage.setItem('theme', 'light');
-    toggle.src = './public/moon.svg';
-    toggleNav.src = './public/moon.svg';
+    toggle.src = './public/sun.svg';
+    toggleNav.src = './public/sun.svg';
     document.body.classList.remove('dark-theme');
     navBar.classList.remove('dark-theme');
     cursor.classList.remove('cursor-dark-theme');
