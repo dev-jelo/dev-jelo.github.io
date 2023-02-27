@@ -217,6 +217,7 @@ html, body {
 
 .about-backdrop {
     display: inline-block;
+    max-width: 850px;
     padding: 40px;
     line-height: 35px;
     margin: 0 20px 100px;
@@ -225,7 +226,6 @@ html, body {
     font-family: 'Noto Sans Mono', monospace;
     background-color: var(--about-backdrop-light);
     transition: background-color 0.5s;
-    /* box-shadow: 3px 3px 10px 0px rgb(87, 87, 87); */
 }
 
 .about-backdrop-dark {
@@ -276,6 +276,14 @@ html, body {
 
 .about-text-dark {
     color: var(--dark-theme-font-color);
+}
+
+.indent-one {
+    padding-left: 50px;
+}
+
+.indent-two {
+    padding-left: 100px;
 }
 
 .projects-container {
