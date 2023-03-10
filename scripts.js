@@ -154,7 +154,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         toggle.classList.remove('fade-in-animation');
         arrow.classList.remove('fade-in-animation');
-    }, 2300);
+    }, 2000);
     
     // Prevent navbar and arrow animation if scrolled down
     if (document.documentElement.scrollTop >= myNameCoords.bottom + document.documentElement.scrollTop) {
