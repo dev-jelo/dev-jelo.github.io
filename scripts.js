@@ -100,6 +100,7 @@ function setDarkTheme() {
     toggle.src = './public/moon.svg';
     toggleNav.src = './public/moon.svg';
     document.body.classList.add('dark-theme');
+    document.querySelector('html').classList.add('html-dark');
     navBar.classList.add('dark-theme');
     cursor.classList.add('cursor-dark-theme');
     arrow.classList.add('arrow-dark-theme');
@@ -121,6 +122,7 @@ function setLightTheme() {
     toggle.src = './public/sun.svg';
     toggleNav.src = './public/sun.svg';
     document.body.classList.remove('dark-theme');
+    document.querySelector('html').classList.remove('html-dark');
     navBar.classList.remove('dark-theme');
     cursor.classList.remove('cursor-dark-theme');
     arrow.classList.remove('arrow-dark-theme');

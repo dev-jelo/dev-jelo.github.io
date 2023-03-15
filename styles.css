@@ -39,6 +39,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
+.html-dark {
+    color-scheme: dark;
+}
+
 .preload {
     transition: none !important;
 }
