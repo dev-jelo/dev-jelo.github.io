@@ -403,6 +403,11 @@ body {
 .contact-icon {
   place-self: center;
   width: 50px;
+  transition: opacity 0.2s;
+}
+
+.contact-icon:hover {
+  opacity: 50%;
 }
 
 .contact-link {
