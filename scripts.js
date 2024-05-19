@@ -8,11 +8,11 @@ let i = 0;
 const typingText = "Jeremy" + String.fromCharCode(160) + "Lo";
 function typing() {
   if (i < typingText.length) {
-  myName.innerHTML += typingText[i];
-  i++;
-  setTimeout(typing, 80);
+    myName.innerHTML += typingText[i];
+    i++;
+    setTimeout(typing, 80);
   } else {
-  cursor.classList.add("blink");
+    cursor.classList.add("blink");
   }
 }
 setTimeout(typing, 500);
@@ -29,44 +29,44 @@ const arrow = document.querySelector(".arrow");
 // Recalculate positions on window resize
 window.addEventListener("resize", () => {
   if (!navBar.classList.contains("navbar-stick")) {
-  navBarCoordsTop =
-    navBar.getBoundingClientRect().top + document.documentElement.scrollTop;
+    navBarCoordsTop =
+      navBar.getBoundingClientRect().top + document.documentElement.scrollTop;
   } else {
-  navBarCoordsTop =
-    myName.getBoundingClientRect().bottom +
-    document.documentElement.scrollTop +
-    13;
+    navBarCoordsTop =
+      myName.getBoundingClientRect().bottom +
+      document.documentElement.scrollTop +
+      13;
   }
   myNameCoordsTop =
-  myName.getBoundingClientRect().top + document.documentElement.scrollTop;
+    myName.getBoundingClientRect().top + document.documentElement.scrollTop;
 });
 
 // Scroll event to check when to stick the navbar to top of page
 document.addEventListener("scroll", () => {
   // Stick navbar to top when scrolling past
   if (document.documentElement.scrollTop >= navBarCoordsTop) {
-  navBar.classList.add("navbar-stick");
+    navBar.classList.add("navbar-stick");
   } else {
-  navBar.classList.remove("navbar-stick");
+    navBar.classList.remove("navbar-stick");
   }
   // Move theme toggle to navbar when scrolled down
   if (document.documentElement.scrollTop >= myNameCoordsTop - 25) {
-  toggle.classList.add("hidden");
-  toggleNav.classList.remove("hidden");
-  spacer.classList.remove("hidden");
+    toggle.classList.add("hidden");
+    toggleNav.classList.remove("hidden");
+    spacer.classList.remove("hidden");
   } else {
-  toggle.classList.remove("hidden");
-  toggleNav.classList.add("hidden");
-  spacer.classList.add("hidden");
+    toggle.classList.remove("hidden");
+    toggleNav.classList.add("hidden");
+    spacer.classList.add("hidden");
   }
   // Remove bottom arrow when scrolled down
   if (document.documentElement.scrollTop > 0 && arrow.style.opacity != "0") {
-  arrow.style.opacity = "0";
+    arrow.style.opacity = "0";
   } else if (
-  document.documentElement.scrollTop === 0 &&
-  arrow.style.opacity != "1"
+    document.documentElement.scrollTop === 0 &&
+    arrow.style.opacity != "1"
   ) {
-  arrow.style.opacity = "1";
+    arrow.style.opacity = "1";
   }
 });
 
@@ -102,21 +102,21 @@ if (sessionTheme) {
 
 function toggleDarkThemeOnClasses(addDark) {
   if (addDark) {
-  for (let i = 0; i < listOfClassesToTheme.length; i++) {
-    document
-    .querySelectorAll(`.${listOfClassesToTheme[i]}`)
-    .forEach((elem) => {
-      elem.classList.add(`${listOfClassesToTheme[i]}-dark`);
-    });
-  }
+    for (let i = 0; i < listOfClassesToTheme.length; i++) {
+      document
+        .querySelectorAll(`.${listOfClassesToTheme[i]}`)
+        .forEach((elem) => {
+          elem.classList.add(`${listOfClassesToTheme[i]}-dark`);
+        });
+    }
   } else {
-  for (let i = 0; i < listOfClassesToTheme.length; i++) {
-    document
-    .querySelectorAll(`.${listOfClassesToTheme[i]}`)
-    .forEach((elem) => {
-      elem.classList.remove(`${listOfClassesToTheme[i]}-dark`);
-    });
-  }
+    for (let i = 0; i < listOfClassesToTheme.length; i++) {
+      document
+        .querySelectorAll(`.${listOfClassesToTheme[i]}`)
+        .forEach((elem) => {
+          elem.classList.remove(`${listOfClassesToTheme[i]}-dark`);
+        });
+    }
   }
 }
 
@@ -132,13 +132,13 @@ function setDarkTheme() {
   arrow.classList.add("arrow-dark-theme");
   toggleDarkThemeOnClasses(true);
   document.querySelectorAll(".contact-icon").forEach((elem) => {
-  if (elem.alt === "email icon") {
-    elem.src = "./public/email-dark.svg";
-  } else if (elem.alt === "github icon") {
-    elem.src = "./public/github-dark.svg";
-  } else {
-    elem.src = "./public/linkedin-dark.svg";
-  }
+    if (elem.alt === "email icon") {
+      elem.src = "./public/email-dark.svg";
+    } else if (elem.alt === "github icon") {
+      elem.src = "./public/github-dark.svg";
+    } else {
+      elem.src = "./public/linkedin-dark.svg";
+    }
   });
 }
 
@@ -154,13 +154,13 @@ function setLightTheme() {
   arrow.classList.remove("arrow-dark-theme");
   toggleDarkThemeOnClasses(false);
   document.querySelectorAll(".contact-icon").forEach((elem) => {
-  if (elem.alt === "email icon") {
-    elem.src = "./public/email.svg";
-  } else if (elem.alt === "github icon") {
-    elem.src = "./public/github.svg";
-  } else {
-    elem.src = "./public/linkedin.svg";
-  }
+    if (elem.alt === "email icon") {
+      elem.src = "./public/email.svg";
+    } else if (elem.alt === "github icon") {
+      elem.src = "./public/github.svg";
+    } else {
+      elem.src = "./public/linkedin.svg";
+    }
   });
 }
 
@@ -175,30 +175,30 @@ toggleNav.addEventListener("click", () => {
 window.addEventListener("load", () => {
   // Loop through all 'preload' elements to remove 'preload' class
   document.querySelectorAll(".preload").forEach((elem) => {
-  elem.classList.remove("preload");
+    elem.classList.remove("preload");
   });
 
   setTimeout(() => {
-  toggle.classList.remove("fade-in-animation");
-  arrow.classList.remove("fade-in-animation");
+    toggle.classList.remove("fade-in-animation");
+    arrow.classList.remove("fade-in-animation");
   }, 2000);
 
   // Prevent navbar and arrow animation if scrolled down
   if (
-  document.documentElement.scrollTop >=
-  myNameCoords.bottom + document.documentElement.scrollTop
+    document.documentElement.scrollTop >=
+    myNameCoords.bottom + document.documentElement.scrollTop
   ) {
-  navBar.classList.remove("fade-in-animation");
-  toggle.classList.remove("fade-in-animation");
+    navBar.classList.remove("fade-in-animation");
+    toggle.classList.remove("fade-in-animation");
   }
   if (
-  window.pageYOffset + self.innerHeight ===
-  document.documentElement.scrollHeight
+    window.scrollY + self.innerHeight ===
+    document.documentElement.scrollHeight
   ) {
-  navBar.classList.remove("fade-in-animation");
+    navBar.classList.remove("fade-in-animation");
   }
   if (document.documentElement.scrollTop > 0) {
-  arrow.classList.remove("fade-in-animation");
+    arrow.classList.remove("fade-in-animation");
   }
 });
 
